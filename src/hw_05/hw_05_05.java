@@ -1,7 +1,5 @@
 package hw_05;
 
-import java.lang.reflect.Array;
-import java.security.SecureRandom;
 import java.util.Arrays;
 
 public class hw_05_05 {
