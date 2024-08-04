@@ -1,6 +1,9 @@
 package hw_07;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+
+import static java.nio.charset.StandardCharsets.*;
 
 public class hw_07_01 {
     /**
@@ -16,14 +19,12 @@ public class hw_07_01 {
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(path)));
             while ( (line = bufferedReader.readLine()) != null){
-                byteCount += line.getBytes("UTF-8").length;
+                byteCount += line.getBytes(UTF_8).length;
                 charCount = charCount + line.length();
                 lineCount = lineCount + 1;
             }
             String result = String.format("檔案共有%d個位元組,%d個字元,%d列資料", byteCount, charCount, lineCount);
             System.out.println(result);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

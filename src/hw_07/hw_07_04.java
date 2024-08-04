@@ -12,8 +12,6 @@ public class hw_07_04 {
      */
     public static void main(String[] args) {
 
-        String pathSrc1 = "src/file/Dog.ser";
-        String pathSrc2 = "src/file/Cat.ser";
         String pathDes = "C:/data/Object.ser";
         Dog dog1 = new Dog("dog1");
         Cat cat1 = new Cat("cat1");

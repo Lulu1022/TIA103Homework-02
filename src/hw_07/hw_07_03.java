@@ -1,6 +1,7 @@
 package hw_07;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class hw_07_03 {
     /**
@@ -14,7 +15,7 @@ public class hw_07_03 {
     }
     public static void copyFile(File sourceFile, File desFile) {
         try {
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(sourceFile), "UTF-8"));
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(sourceFile), StandardCharsets.UTF_8));
             BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(desFile)));
 
             String read;

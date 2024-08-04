@@ -1,6 +1,7 @@
 package hw_07;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public class hw_07_02 {
@@ -12,7 +13,7 @@ public class hw_07_02 {
         Random random = new Random();
         String path = "src/file/hw_07_02.txt";
         try {
-            BufferedWriter writer =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path,true),"UTF-8"));
+            BufferedWriter writer =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path,true), StandardCharsets.UTF_8));
             for (int i = 0; i < 10; i++) {
                 int num = random.nextInt(1000) + 1; // 生成 1 到 1000 之間的數字
                 writer.write(num + System.lineSeparator()); // 將數字轉為字符串並寫入文件
