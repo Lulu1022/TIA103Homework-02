@@ -17,14 +17,14 @@ public class hw_07_05 {
             Object obj;
             try {
                 while (true) {
-                        obj = objectInputStream.readObject();
-                        if (obj instanceof Cat) {
-                            ((Cat) obj).speak();
-                        } else if (obj instanceof Dog) {
-                            ((Dog) obj).speak();
-                        } else {
-                            System.out.println("未知的物件類型。");
-                        }
+                    obj = objectInputStream.readObject();
+                    if (obj instanceof Cat) {
+                        ((Cat) obj).speak();
+                    } else if (obj instanceof Dog) {
+                        ((Dog) obj).speak();
+                    } else {
+                        System.out.println("未知的物件類型。");
+                    }
                 }
             } catch (IOException e) {
                 System.out.println("資料讀取完畢");
